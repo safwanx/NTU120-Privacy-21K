@@ -1,0 +1,27 @@
+# --- Heavy data, models, vendored code (download / regenerate; never tracked) ---
+/models/
+/repos/
+/datasets/
+
+# Pipeline outputs (regenerable; large)
+/pilot_outputs/
+/gait_integration/work/
+/pbp_integration/work/
+
+# Heavy protocol media (keep metadata.csv + splits/, drop video/skeletons)
+/pilot_pack/rgb/
+/pilot_pack/skeletons/
+
+# --- Python / tooling cruft ---
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# --- OS cruft ---
+Thumbs.db
+.DS_Store
+desktop.ini

@@ -1,0 +1,30 @@
+# Reproduction dependencies for the NTU120-Privacy-21K pipeline.
+# Best-effort consolidation of the pip instructions across the per-stage READMEs.
+# Install torch/torchvision matching your CUDA build first (see pytorch.org).
+
+# Core
+numpy
+pandas
+tqdm
+matplotlib
+scikit-learn
+Pillow
+opencv-python>=4.8
+h5py
+joblib
+
+# Detection / pose adversaries (steps 03, 17)
+torch>=2.1
+torchvision>=0.16
+ultralytics>=8.1          # YOLO person detection + yolo11m-pose
+insightface>=0.7          # RetinaFace face detection
+onnxruntime-gpu>=1.16     # GPU inference for insightface
+
+# Face / re-ID adversaries (steps 05, 06)
+gdown                     # torchreid model download
+
+# VideoMAEv2 action utility (steps 12-16)
+transformers
+timm
+safetensors
+accelerate

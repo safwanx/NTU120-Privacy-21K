@@ -1,0 +1,5 @@
+# Shell scripts and SLURM batch files must stay LF (they run on Linux/SLURM).
+*.sh    text eol=lf
+*.sbatch text eol=lf
+# Python is LF too for consistency across the Windows/SLURM split.
+*.py    text eol=lf
